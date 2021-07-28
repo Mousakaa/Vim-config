@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/root/Documents/programs/c/snake'
+let g:netrw_dirhist_9='/root/Documents/programs/c/olchelloworld'
+let g:netrw_dirhist_8='/root/.vim'
+let g:netrw_dirhist_7='/root/Documents/programs/c/olchelloworld'
+let g:netrw_dirhist_6='/root/Documents/programs/c/olcPixelGameEngine'
+let g:netrw_dirhist_5='/root/Documents/programs/c'
+let g:netrw_dirhist_4='/root/Documents/programs/c/olchelloworld'
+let g:netrw_dirhist_3='/root/Documents/programs/c'
+let g:netrw_dirhist_2='/root/Documents/programs'
+let g:netrw_dirhist_1='/root/Documents'
