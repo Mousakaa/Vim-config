@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/mnt/f/Cours/FHS/Projet'
+let g:netrw_dirhist_7='/mnt/f/Cours/FHS'
+let g:netrw_dirhist_6='/mnt/f/Cours/FHS/Projet'
+let g:netrw_dirhist_5='/mnt/f/Cours/Informatique/Algorithmique'
+let g:netrw_dirhist_4='/mnt/f/Cours/Informatique/Algorithmique/Exercices'
+let g:netrw_dirhist_3='/mnt/f/Cours/Informatique/Algorithmique/Exercices/bubblesort'
+let g:netrw_dirhist_2='/mnt/f/Cours/Informatique/Algorithmique/Exercices'
+let g:netrw_dirhist_1='/mnt/f/Cours/Informatique/Algorithmique'
+let g:netrw_dirhist_0='/mnt/f/Cours/Informatique/Algorithmique/Exercices/ex10'
+let g:netrw_dirhist_9='/mnt/f/Cours/Informatique/Algorithmique/Exercices'
