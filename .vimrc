@@ -39,6 +39,7 @@ augroup vimrcEx
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+
 augroup END
 
 " Add optional packages.
@@ -51,6 +52,17 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+call plug#begin('~/.vim/pack')
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'aarleks/zettel.vim'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
 " Custom
 set relativenumber
 set number
@@ -61,6 +73,38 @@ set list
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+set autoindent
+set cursorcolumn
+set cursorline
+
+" Custom key bindings
+map m <C-w>
 
 " Color scheme
 colorscheme molokai
+
+" Zettlekasten settings
+let g:zettelkasten = '~/Knowledge/'
+let mapleader = ','
+setlocal spell spelllang=fr
+
+map <Leader>zd :MarkdownPreviewToggle<CR>
+map <Leader>zn /\[\[\S*.md\]\]<CR>
+map ² :w<CR>:MarkdownPreviewStop<CR><C-6>
+" :MarkdownPreviewToggle<CR>
+
+nnoremap gf :w<CR>:MarkdownPreviewStop<CR>gf
+
+" Pandoc settings
+let maplocalleader = ','
+let g:pandoc#modules#disabled = ['spell']
+" let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#syntax#conceal#blacklist = ['subscript', 'superscript', 'atx']
+let g:pandoc#hypertext#automatic_link_regex = '\[\[\S*.md\]\]'
+let g:pandoc#hypertext#use_default_mappings = 0
+
+" Rust settings
+map <Leader>r :wa<CR>:!cargo run<CR>
+
+" Nerdtree settings
+map <Leader>n :NERDTreeToggle<CR>
